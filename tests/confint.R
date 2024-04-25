@@ -1,0 +1,59 @@
+library(epigrowthfit)
+options(warn = 2L, error = if (interactive()) recover)
+
+.S3method("all.equal", "confint.egf",
+          function(target, current, ignore = NULL, ...) {
+          	if (!is.null(ignore))
+          		attributes(target)[ignore] <- attributes(current)[ignore] <-
+          			NULL
+          	NextMethod()
+          })
+
+o.1    <- egf_cache(        "egf-1.rds")
+o.1c.w <- egf_cache("confint-egf-1.rds") # confint(method =    "wald")
+o.1c.p <- egf_cache("confint-egf-2.rds") # confint(method = "profile")
+o.1c.u <- egf_cache("confint-egf-3.rds") # confint(method = "uniroot")
+o.1f   <- egf_cache( "fitted-egf-1.rds")
+o.1p   <- egf_cache("profile-egf-1.rds")
+
+
+## object ##############################################################
+
+o.1fc <- confint(o.1f, class = TRUE)
+o.1pc <- confint(o.1p, class = TRUE)
+
+stopifnot(exprs = {
+	is.list(o.1c.w)
+	identical(oldClass(o.1c.w), c("confint.egf", "data.frame"))
+	all.equal(o.1c.w, o.1fc)
+
+	is.list(o.1c.p)
+	identical(oldClass(o.1c.p), c("confint.egf", "data.frame"))
+	all.equal(o.1c.p, o.1pc)
+
+	is.list(o.1c.u)
+	identical(oldClass(o.1c.u), c("confint.egf", "data.frame"))
+	all.equal(o.1c.u, o.1c.p, tolerance = 5e-06)
+})
+
+
+## parallel ############################################################
+
+f <-
+function(method, cores)
+	confint(o.1, A = NULL, method = "uniroot", class = TRUE,
+	        top = "log(r)", subset = quote(country == "A" & wave == 1),
+	        parallel = egf_parallel(method = method, cores = cores))
+
+windows <- .Platform[["OS.type"]] == "windows"
+stopifnot(exprs = {
+	all.equal(o.1c.u, f("multicore", if (windows) 1L else 2L))
+	all.equal(o.1c.u, f("snow", 2L))
+})
+
+
+## plot ################################################################
+
+op <- par(mar = c(4.5, 4, 2, 1), oma = c(0, 0, 0, 0))
+plot(o.1c.w)
+par(op)
