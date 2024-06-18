@@ -1,6 +1,24 @@
 \name{NEWS}
 \title{News for \R{} Package \pkg{epigrowthfit}}
 
+\section{Changes in version 0.15.3 (2024-06-17)}{
+  \subsection{DEPRECATED AND DEFUNCT}{
+    \itemize{
+      \item \code{egf_cache} is removed.  Serializing objects under
+      \code{tools::R_user_dir("epigrowthfit", "cache")} for reuse in
+      examples and tests introduced a race condition when running two
+      or more checks concurrently, and workarounds were not appealing.
+    }
+  }
+  \subsection{INSTALLATION}{
+    \itemize{
+      \item \pkg{emdbook} is removed from the \code{Suggests} field of
+      \file{DESCRIPTION}.  A full check of the package requires only
+      \pkg{TMB} and its dependencies.
+    }
+  }
+}
+
 \section{Changes in version 0.15.2 (2024-04-24)}{
   \subsection{BUG FIXES}{
     \itemize{
