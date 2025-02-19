@@ -1,6 +1,16 @@
 \name{NEWS}
 \title{News for \R{} Package \pkg{epigrowthfit}}
 
+\section{Changes in version 0.15.4 (2025-02-14)}{
+  \subsection{BUG FIXES}{
+    \itemize{
+      \item Tests in \file{tests/egf_utils.R} wrongly relied on the
+      type of the value of a call to \code{seq.int}, causing errors
+      under \R{} 4.5.
+    }
+  }
+}
+
 \section{Changes in version 0.15.3 (2024-06-17)}{
   \subsection{DEPRECATED AND DEFUNCT}{
     \itemize{

@@ -1,6 +1,6 @@
 Package: epigrowthfit
-Version: 0.15.3
-Date: 2024-06-17
+Version: 0.15.4
+Date: 2025-02-14
 License: GPL-3
 Encoding: UTF-8
 URL: https://github.com/davidearn/epigrowthfit
@@ -34,10 +34,10 @@ Authors@R:
 Depends: R (>= 4.3)
 LinkingTo: RcppEigen (>= 0.3.4.0.0), TMB
 Imports: Matrix (>= 1.6-2), TMB, grDevices, graphics, methods, nlme,
-        stats, tools, utils
+        stats, utils
 LazyData: true
 NeedsCompilation: yes
-Packaged: 2024-06-18 01:06:32 UTC; mikael
+Packaged: 2025-02-18 13:50:46 UTC; mikael
 Author: Mikael Jagan [aut, cre] (<https://orcid.org/0000-0002-3542-2938>),
   Ben Bolker [aut] (<https://orcid.org/0000-0002-2127-0443>),
   Jonathan Dushoff [ctb] (<https://orcid.org/0000-0003-0506-4794>),
@@ -45,4 +45,4 @@ Author: Mikael Jagan [aut, cre] (<https://orcid.org/0000-0002-3542-2938>),
   Junling Ma [ctb]
 Maintainer: Mikael Jagan <jaganmn@mcmaster.ca>
 Repository: CRAN
-Date/Publication: 2024-06-18 04:00:09 UTC
+Date/Publication: 2025-02-19 14:50:02 UTC

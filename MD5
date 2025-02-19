@@ -1,5 +1,5 @@
-8196887cd6436073e516e383ca51cba3 *DESCRIPTION
-f2b5e86c2df7d33ff30bd1cf7fee6b55 *NAMESPACE
+83d19750e808411a7e66f93474f8d1f0 *DESCRIPTION
+74c4b4af7139b733500dc129a6e57ed3 *NAMESPACE
 dc2c3104889888d47a2ab1e02bc8b70e *R/coef.R
 b54c858f0f93b395bb6f03c0910f8c61 *R/compatibility.R
 8f57c04e536e4efb7eb343f4f32939de *R/confint.R
@@ -28,9 +28,9 @@ b5961645f96b06cb84298b1fc44441ba *R/summary.R
 958f1c2493566635c21d07ff6e371d0c *R/utils.R
 933adfd57fc82f5f450b8381d04af341 *R/validity.R
 77026e211fe3c93438cafeddaabadf1f *R/zzz.R
-b52aabe9a2757fc86742763db9dafc9b *build/partial.rdb
+76161b65639451c966be75488458b3c3 *build/partial.rdb
 887bbb84cb2f0218f2ed718229b8ceab *data/covid19.ontario.rda
-e25ffa05340e2278d1ca116a3cc096ec *inst/NEWS.Rd
+5420976f7368da3940caf6095f3b4c37 *inst/NEWS.Rd
 e6b2f67b0a388b885add7dc0841db6c8 *inst/scripts/covid19.ontario.R
 389429d27b0e69bd5dfd4de0436c61fd *inst/scripts/covid19.ontario.definitions.tsv
 279e358c224ae6c082b9f535b65e54d6 *man/R0.Rd
@@ -80,9 +80,9 @@ b77fb082d60c7278cd5e2b3ccfb39f42 *man/timescale.Rd
 7cd3769fc1904203eb8e42e07b34cf5d *src/curve.h
 c9931b044233946772dab6ebc06173f5 *src/distributions.h
 365c7f32b4419cfc9618ce3b76c92753 *src/enum.h
-675beb3f218f3805b3affc65565d05d3 *src/epigrowthfit.cpp
-34dceb4e59669483aa1929963719e636 *src/nll.h
-7449eb26fae9387e936aefdb0922b498 *src/structs.h
+cd13051637e4beb361d99865c6ff1254 *src/epigrowthfit.cpp
+af4b43c4b3b3a72023167f793b8a922c *src/nll.h
+c1316b665bdeb8d954a263451cb53898 *src/structs.h
 9cbefc7b66ba7b1e952d5e07f814d107 *src/utils.h
 30073be075b46e903bb0998950b0d307 *tests/coef.R
 96aa418ed89b8f1ee01abc4dc0d0fbc1 *tests/confint.R
@@ -93,11 +93,11 @@ a46f7187b0892f9a881f8f8f6058d5ee *tests/egf_eval.R
 9f9e6a56ab082a57c82c401aa243a66e *tests/egf_examples_day_of_week.R
 282205f4f1708dcd6cd04de24754679d *tests/egf_examples_excess.R
 e38c3f0570474408c66598eea3caba6b *tests/egf_examples_fixed.R
-9f96c6fdb06c16b6128114942cdeb2c3 *tests/egf_examples_random.R
+9e7bb8a0c622b5f2594a180c400dfa89 *tests/egf_examples_random.R
 ac15580bfdb2da92b607ecbe3c1f4728 *tests/egf_link.R
 68d5fe8ef4ad531a34b68dc6b6d72e01 *tests/egf_misc.R
 7d4cb45f35138228ceed1658b694b427 *tests/egf_options.R
-2ebe1fa4ada12e6ddf900290183976db *tests/egf_utils.R
+eefc2a5fa21b9356aebac8d774d55061 *tests/egf_utils.R
 ce0c38f304cdc599b2ed80f096ebb994 *tests/epidemic.R
 fb3a2141c40f847e7e955723b61f5b9c *tests/extract.R
 cea9ff8fee2609a815cfa0f0224a0c39 *tests/fitted.R
